@@ -1,0 +1,7 @@
+{
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "strict",
+  "jsxSingleQuote": true,
+  "printWidth": 88,
+  "singleQuote": true
+}
