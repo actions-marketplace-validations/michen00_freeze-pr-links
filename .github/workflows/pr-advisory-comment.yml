@@ -47,7 +47,7 @@ jobs:
       # pull request, so the script this runs is the reviewed one. That is the whole
       # security property, and it is a default rather than a setting, so a future edit
       # adding `ref:` here would quietly undo it.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
       # continue-on-error, because the gate skips the upload for a bot-authored pull
