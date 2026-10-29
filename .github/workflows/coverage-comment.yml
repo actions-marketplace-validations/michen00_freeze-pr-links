@@ -39,7 +39,7 @@ jobs:
     steps:
       # No `ref:`, which on workflow_run resolves the default branch rather
       # than the pull request -- so the script this runs is the reviewed one.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
       # continue-on-error: ci.yml's own earlier steps (checkout, setup-uv, uv

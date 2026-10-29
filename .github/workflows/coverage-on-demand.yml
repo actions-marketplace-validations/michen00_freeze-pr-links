@@ -132,7 +132,7 @@ jobs:
       # Pinned to the SHA `resolve` already validated, not the branch name --
       # a branch can move between the two jobs, and the SHA is what the
       # eventual comment names as measured.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           repository: ${{ needs.resolve.outputs.head_repo }}
           ref: ${{ needs.resolve.outputs.head_sha }}
@@ -184,7 +184,7 @@ jobs:
       # the pull request measured above. `measure` already ran that
       # repository's own code under a read-only token; this job's write
       # scope never touches it.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
       - uses: actions/download-artifact@v8
