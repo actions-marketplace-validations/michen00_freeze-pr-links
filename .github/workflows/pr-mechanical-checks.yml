@@ -53,7 +53,7 @@ jobs:
       # persist-credentials is left at its default, deliberately: the "Check commit
       # subjects" step runs `git fetch origin`, which needs the credential this
       # checkout persists.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       # The checks are pure standard library, so a bare interpreter is all they need.
