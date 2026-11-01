@@ -40,7 +40,7 @@ jobs:
       # parser can be used. A tag push already lands on the tag; a manual
       # dispatch lands on the default branch. The explicit checkout below moves
       # to the requested tag in both cases.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -117,7 +117,7 @@ jobs:
       attestations: write
     steps:
       # sign-artifacts.sh comes from the tag, like every file this run builds from.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           ref: refs/tags/${{ needs.build.outputs.tag }}
           persist-credentials: false
@@ -170,7 +170,7 @@ jobs:
       tag: ${{ needs.build.outputs.tag }}
     steps:
       # The release notes come from the tag's CHANGELOG.md.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           ref: refs/tags/${{ needs.build.outputs.tag }}
           persist-credentials: false
